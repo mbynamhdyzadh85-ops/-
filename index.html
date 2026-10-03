@@ -1,32 +1,212 @@
 <!DOCTYPE html>
-<html>
+<html lang="fa">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minuit côtier</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: #17194a;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      font-family: Arial, sans-serif;
+<title>𝑴𝒊𝒏𝒖𝒊𝒕 𝒄ô𝒕𝒊𝒆𝒓</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #08091f, #17144b, #32236b);
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ستاره‌ها */
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.star {
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    animation: move linear infinite;
+}
+
+@keyframes move {
+
+    0% {
+        transform: translateY(-10vh);
+        opacity: 0;
     }
 
-    h1 {
-      font-size: 35px;
+    20% {
+        opacity: 1;
     }
-  </style>
+
+    100% {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+
+}
+
+/* محتوا */
+
+.content {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 650px;
+    margin: auto;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.title {
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 25px #9c9cff;
+}
+
+.description {
+    color: #c9c8ff;
+    margin-bottom: 40px;
+}
+
+/* کارت */
+
+.card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 25px;
+    padding: 25px;
+    margin-bottom: 25px;
+    backdrop-filter: blur(10px);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.card p {
+    color: #d2d1e8;
+    line-height: 1.8;
+}
+
+/* عکس */
+
+.photo {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+}
+
+/* دکمه */
+
+button {
+    border: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    background: #777cff;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 25px rgba(119,124,255,.5);
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.footer {
+    margin-top: 45px;
+    color: #7777a8;
+    font-size: 13px;
+}
+
+</style>
 </head>
+
 
 <body>
 
-  <h1>𝑴𝒊𝒏𝒖𝒊𝒕 𝒄ô𝒕𝒊𝒆𝒓 ✦</h1>
+<div class="stars">
+
+    <span class="star" style="left:5%;animation-duration:8s;">☆</span>
+    <span class="star" style="left:12%;animation-duration:12s;">✦</span>
+    <span class="star" style="left:20%;animation-duration:9s;">✧</span>
+    <span class="star" style="left:30%;animation-duration:14s;">☆</span>
+    <span class="star" style="left:40%;animation-duration:10s;">✦</span>
+    <span class="star" style="left:50%;animation-duration:13s;">☆</span>
+    <span class="star" style="left:60%;animation-duration:8s;">✧</span>
+    <span class="star" style="left:70%;animation-duration:11s;">☆</span>
+    <span class="star" style="left:80%;animation-duration:9s;">✦</span>
+    <span class="star" style="left:90%;animation-duration:15s;">☆</span>
+
+</div>
+
+
+<div class="content">
+
+    <div class="title">
+        𝑴𝒊𝒏𝒖𝒊𝒕 𝒄ô𝒕𝒊𝒆𝒓
+    </div>
+
+    <div class="description">
+        une petite nuit pleine d'étoiles ✦
+    </div>
+
+
+    <div class="card">
+
+        <h2>✦ bienvenue ✦</h2>
+
+        <p>
+            به دنیای کوچیک من خوش اومدی.
+            اینجا قراره پر از عکس، موزیک،
+            و چیزای قشنگ باشه.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>🖼️ عکس</h2>
+
+        <img
+        class="photo"
+        src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80">
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>🌙 درباره‌ی اینجا</h2>
+
+        <p>
+            یک گوشه‌ی آروم برای شب‌ها،
+            ستاره‌ها و خاطره‌ها.
+        </p>
+
+        <button onclick="alert('خوش اومدی به Minuit côtier ✦')">
+            ورود ✦
+        </button>
+
+    </div>
+
+
+    <div class="footer">
+        made with ♡
+    </div>
+
+</div>
 
 </body>
 </html>
